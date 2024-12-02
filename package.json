@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.15",
+    "tsc-alias": "^1.8.10",
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "typescript": "^5.7.2"
+  }
+}

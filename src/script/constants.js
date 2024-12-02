@@ -1,0 +1,10 @@
+export const textOutput = document.getElementById('text-output');
+export const output = document.getElementById('output');
+export const healthBar = document.getElementById('health-bar');
+export const warriorInfo = document.getElementById('warrior-info');
+export const sorcererInfo = document.getElementById('sorcerer-info');
+export const healerInfo = document.getElementById('healer-info');
+export const buttonWarriorAttack = document.getElementById('warrior-attack');
+export const buttonSorcererAttack = document.getElementById('sorcerer-attack');
+export const buttonHealerAttack = document.getElementById('healer-attack');
+export const buttonHealerPower = document.getElementById('heal-btn');

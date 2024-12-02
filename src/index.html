@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - POO</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-[url('../assets/bg.jpg')] bg-no-repeat bg-cover">
+    <div class="flex flex-col items-center ">
+        <div id="output-boss" class="flex flex-col items-center rounded-xl max-w-xl m-7">
+            <h2 class="text-2xl font-bold text-slate-100 bg-slate-700 rounded-lg px-2 py-1 mb-2">Balor</h2>
+            <div class="relative">
+                <img src="../assets/boss.webp" alt="Boss" class="rounded-xl border-4 border-slate-800" />
+                <div
+                    class="absolute top-0 left-0 right-0 mx-4 my-2 bg-black bg-opacity-50 text-white rounded h-4 border border-slate-300">
+                    <div id="health-bar" class="bg-red-700 rounded h-full w-full"></div>
+                </div>
+            </div>
+            <p id="text-output-boss"></p>
+        </div>
+        <div class="cards-stack">
+            <div id="card-1" class="card flex flex-col items-center p-4 bg-slate-500 rounded-xl max-w-xs">
+                <h3 class="text-xl font-bold text-slate-100 bg-slate-700 rounded-lg px-2 py-1 mb-2">Guerreiro</h3>
+                <img src="../assets/warrior.webp" alt="Guerreiro" class="rounded-xl border-4 border-slate-800" />
+                <div class="flex flex-col gap-4 w-full h-full px-4">
+                    <button id="warrior-attack"
+                        class="px-2 py-1 bg-slate-600 rounded-xl text-slate-100 mt-2 w-fit">Atacar</button>
+
+                    <div class="bg-slate-200 p-2 rounded-xl">
+                        <p id="warrior-info"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="card-2" class="card flex flex-col items-center p-4 bg-slate-500 rounded-xl max-w-xs">
+                <h3 class="text-xl font-bold text-slate-100 bg-slate-700 rounded-lg px-2 py-1 mb-2">Feiticeiro</h3>
+                <img src="../assets/sorcerer.webp" alt="Feiticeiro" class="rounded-xl border-4 border-slate-800" />
+                <div class="flex flex-col gap-4 w-full h-full px-4">
+                    <button id="sorcerer-attack"
+                        class="px-2 py-1 bg-slate-600 rounded-xl text-slate-100 mt-2 w-fit">Atacar</button>
+
+                    <div class="bg-slate-200 p-2 rounded-xl">
+                        <p id="sorcerer-info"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="card-3" class="card flex flex-col items-center p-4 bg-slate-500 rounded-xl max-w-xs">
+                <h3 class="text-xl font-bold text-slate-100 bg-slate-700 rounded-lg px-2 py-1 mb-2">Curandeira</h3>
+                <img src="../assets/healer.webp" alt="Curandeira" class="rounded-xl border-4 border-slate-800" />
+                <div class="flex flex-col gap-4 w-full h-full px-4">
+                    <div class="flex gap-4">
+                        <button id="healer-attack"
+                            class="px-2 py-1 bg-slate-600 rounded-xl text-slate-100 mt-2">Atacar</button>
+                        <div class="bg-slate-600 py-1 rounded-xl text-slate-100 px-2 mt-2 w-fit">
+                            <button id="heal-btn" class="bg-slate-600 rounded-xl text-slate-100">Curar</button>
+                            <select id="heal-target" class="bg-slate-600">
+                                <option value="Guerreiro">Guerreiro</option>
+                                <option value="Feiticeiro">Feiticeiro</option>
+                                <option value="Curandeira">Curandeira</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-200 p-2 rounded-xl">
+                        <p id="healer-info"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="output"
+        class="absolute top-2 left-2 bg-slate-200 w-fit max-w-md max-h-[450px] rounded border-8 border-slate-400 overflow-auto">
+        <h3 class="text-slate-900 font-semibold bg-slate-400">Saída</h3>
+        <p id="text-output" class="text-slate-900 w-fit p-2"></p>
+    </div>
+
+    <script type="module" src="./script/main.js"></script>
+</body>
+
+</html>

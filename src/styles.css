@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+.cards-stack {
+    display: grid;
+    grid-column:  1fr / min(30vmin, 40ch);
+    grid-template-areas: "stack";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.card {
+    grid-area: stack;
+    transform: rotate(var(--r, 0deg)) translateY(var(--t, 0px));
+    transform-origin: center 200%;
+    transition: ease-in-out 100ms;
+}
+
+.card:hover {
+    translate: 0 -50px;
+}
+
+.active-card {
+    z-index: 10;
+}
+
+.card:nth-of-type(3) {
+    --r: 0deg
+}
+
+.card:nth-of-type(2) {
+    --r: calc(var(--scalar, 5) * 1deg * 2)
+}
+
+.card:nth-of-type(1) {
+    --r: calc(var(--scalar, 5) * 2 * 1deg * -1)
+}
