@@ -21,7 +21,7 @@
 - As cartas dos personagens comportam-se como um baralho.
 
 ## 📸 Demonstração
-![Demonstração](https://github.com/user-attachments/assets/35edbbb1-7ab3-4e74-97ef-984c14c37a33)
+![Demonstração](https://github.com/user-attachments/assets/6ea6d78e-bf04-4b4d-ae49-d8b614aa1740)
 
 ## ⚙️ Intruções de uso
 
