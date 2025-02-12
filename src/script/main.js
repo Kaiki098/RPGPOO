@@ -37,7 +37,9 @@ function removeCharacter(character) {
 buttonWarriorAttack.addEventListener('click', () => {
     if(w1.attack(b1)) {
         b1.attackRandom(characters);
-        if (w1.isDead()) removeCharacter(w1);
+        characters.forEach((character) => {
+          if (character.isDead()) removeCharacter(character);
+        });
         w1.updateInfo();
     }
 });
@@ -45,7 +47,9 @@ buttonWarriorAttack.addEventListener('click', () => {
 buttonSorcererAttack.addEventListener('click', () => {
     if (s1.attack(b1)) {
         b1.attackRandom(characters);
-        if (s1.isDead()) removeCharacter(s1);
+        characters.forEach((character) => {
+          if (character.isDead()) removeCharacter(character);
+        });
         s1.updateInfo();
     }
 });
@@ -53,7 +57,7 @@ buttonSorcererAttack.addEventListener('click', () => {
 buttonHealerAttack.addEventListener('click', () => {
     if (h1.attack(b1)) {
         b1.attackRandom(characters);
-        if (h1.isDead()) removeCharacter(h1);
+        characters.forEach((character) => { if (character.isDead()) removeCharacter(character)});
         h1.updateInfo();
     }
     
